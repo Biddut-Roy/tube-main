@@ -40,8 +40,7 @@ const categoryCard = async (Id = 1000, istTrue) => {
         }else{
             showCard(data.data , istTrue);
         }
-        // sortBtn(idData);
-        console.log(idData)
+        return idData;
 }
 
 const showCard = (cardId, istTrue) => {
@@ -101,10 +100,12 @@ cardId.forEach((card) => {
 
 
 //  sorting data
+document.getElementById('sortClick').addEventListener('click',function(){
+        categoryCard(idData ,true);
 
-const sortBtn = (idData) =>{
-    categoryCard(idData ,true);
-}
+} )
+
+
 
 categoryCard();
 category();
