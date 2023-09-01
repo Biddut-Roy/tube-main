@@ -12,29 +12,30 @@
     <header class="border-solid border-2">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
-              <div class="dropdown">
                 <img src="Logo.png" alt="">
-              </div>
             </div>
-            <div class="navbar-center">
-              <a class="btn bg-slate-400 normal-case text-xl">Sort by view</a>
+            <div onclick="sortBtn()" class="navbar-center">
+              <button class="btn btn-active normal-case text-sm md:text-base lg:text-xl">Sort by view</button>
             </div>
-            <div class="navbar-end ">
-                    <button class="text-white bg-red-500 h-8 w-12">Blog</button>
+            <div class="navbar-end">
+                <button onclick="blog()" class="btn btn-error">Blog</button>
             </div>
           </div>
     </header>
     <main>
         <!-- allData show  -->
         <section>
-            <div id="all-data" class="flex gap-8 justify-center my-10">
+            <div id="all-data" class="flex gap-2 md:gap-8 lg:gap-8 justify-center my-10">
                 <!-- ??Dynamic data load in js -->
             </div>
         </section>
         <!-- card show -->
         <section>
-           <div id="category-card" class="grid grid-cols-4 gap-4">
+           <div id="category-card" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3  md:gap-3 lg:gap-4">
              
+           </div>
+           <div id="no-datafound" class="">
+
            </div>
         </section>
     </main>
